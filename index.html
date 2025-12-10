@@ -1,136 +1,506 @@
  <!DOCTYPE html>
- <html lang="en">
+<html lang="en" data-theme="dark">
 
- <head>
-     <meta charset="utf-8">
-     <meta name= "viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-     <link rel="icon" type="image/png" href="img/techis-logo.png">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
-     <link rel="stylesheet" href="style.css">
-     <title>Portfolio</title>
- </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Alisha Patel - Web Application Developer Portfolio. Innovative frontend development with modern technologies.">
+    <meta name="keywords" content="web developer, frontend, portfolio, HTML, CSS, Python, Django, JavaScript">
+    <meta name="author" content="Alisha Patel">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/techis-logo.png">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Alisha Patel | Web Developer Portfolio</title>
+</head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
-    <div class="container">
-        <a class="navbar-brand title-icon" href="#"><span class="font-primary">P</span>ortfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarToggler">
-        <ul class="navbar-nav ms-auto mb-2">
-          <li class="nav-item">
-            <a class="nav-link font-black" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link font-black" href="#Project">Project</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  
-    <div id="about">
-        <h2><span class="font-primary">A</span>bout</h2>
-        <img src="img/pi2.jpg">
-        <div class="name">Alisha Patel</div> 
-    <div class="vocation">Web Application Developer</div>
-    <div class="skills">HTML / CSS/ Python</div>
-    <p>
-        Hey, I'm Alisha Patel.
-        I'm a front-end web Developer.
-    </p>
-    <div class="'email">alishapatel19@icloud.com</div>
-    <div class="icons">
-        <a href="https://github.com/Alisha313"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/alisha-p-b636381b3/"><i class="bi bi-linkedin ms-3"></i></a>
-    </div>
-    </div>
-
-    <div id="project">
-      <h2><span class="font-primary">P</span>roject</h2>
-
-      <div class="card mb-3">
-        <div class="row">
-          <div class="col-md-4">
-            <video id="video" autoplay muted controls src="video/IMG_5825.MP4"></video>
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Foot commerce</h5>
-              <p class="card-text"><strong>Project Description:</strong>This is a mini e-commerce project with a sign up and sign in functionality. You can order any foot wear with a 
-                simple click and the item gets added to the Cart. In the checkout page you can enter all the address details and place the order.  
-                <br> <br> <strong>Technologies Used:</strong> Html, CSS, Bootstrap, Javascript / JQuery, Django, Cloudinary (To host uploaded images on CDN), Heroku.
-              </p>
-
-              <p class="card-text"><small class="text-muted">
-                Test Login Account <br>
-                Email: alishapatel19@icloud.com <br>
-                Password: 5566778899
-              </small></p>
-              <a href="https://foot-commerce-frontend.herokuapp.com/" target="_blank" class="btn btn-secondary">Website link</a>
-              <a href="https://github.com/Alisha313/foot-commerce" target="_blank" class="btn btn-secondary">Github link</a>
-    
-            </div>
-          </div>
+    <!-- Page Loader -->
+    <div id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
         </div>
-      </div>
-
-      <div class="card mb-3">
-        <div class="row">
-          <div class="col-md-4">
-            <video id="video" autoplay muted controls src="video/Submarine Pizzeria.MP4"></video>
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">SubMarine Pizzeria</h5>
-              <p class="card-text"><strong>Project Description:</strong>This is a mini e-commerce project with a sign up and sign in functionality. You can order a Pizza with a 
-                simple click and the item gets added to the Cart. In the checkout page you can enter all the address details and place the order.  
-                <br> <br> <strong>Technologies Used:</strong> Html, CSS, Bootstrap, Javascript / JQuery, Django, Cloudinary (To host uploaded images on CDN), Heroku.
-              </p>
-
-              <p class="card-text"><small class="text-muted">
-                Test Login Account <br>
-                Email: alishapatel19@icloud.com <br>
-                Password: 5566778899
-              </small></p>
-              <a href="https://frontend-sd-alisha.herokuapp.com/" target="_blank" class="btn btn-secondary">Website link</a>
-              <a href="https://github.com/Alisha313/Submarine-Pizzeria" target="_blank" class="btn btn-secondary">Github link</a>
-    
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3">
-        <div class="row">
-          <div class="col-md-4">
-            <video id="video" autoplay muted controls src="video/twitter clone.MP4" ></video>
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Twitter Clone</h5>
-              <p class="card-text"><strong>Project Description:</strong> Users can post tweets and see everyone's in our app. To keep the 
-                project simple, we did not include a sign-up/login functionality. But you can learn CRUD(Create/Read/Update/Delete) through this project.
-
-                <br>
-                With this project, we created a platform where you can express your
-thoughts anonymously, showcase your pictures, and much more on a
-single website. Post, edit, or delete posts at the convenience of just a few
-touches. This project is based on Twitter and anonymity adds to its special
-features. Without the necessity of an account,
-                <br> <br><strong>Technologies Used:</strong> Html, CSS, Bootstrap, Javascript / JQuery, Django, Cloudinary (To host uploaded images on CDN), Heroku.
-              </p>
-              <a href="https://twitterclone-alisha.herokuapp.com/" target="_blank" class="btn btn-secondary">Website link</a>
-              <a href="https://github.com/Alisha313/Twitter-Clone" target="_blank" class="btn btn-secondary">Github link</a>
-    
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-</body> 
 
-</html></html>
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="font-primary">A</span>lisha<span class="text-gradient">.</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#project">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <button id="themeToggle" aria-label="Toggle theme">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <canvas id="neuralCanvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="img/pi2.jpg" alt="Alisha Patel">
+            </div>
+            <p class="hero-greeting" id="aiGreeting">Welcome to my portfolio</p>
+            <h1 class="hero-title">Hi, I'm <span class="text-gradient">Alisha Patel</span></h1>
+            <p class="hero-subtitle">I'm a <span id="typewriter">Web Application Developer</span></p>
+            <p class="hero-description">
+                Crafting beautiful, functional, and user-centered digital experiences. 
+                Passionate about transforming ideas into elegant solutions.
+            </p>
+            <div class="hero-cta">
+                <a href="#project" class="btn-primary-custom">
+                    <i class="bi bi-eye"></i> View My Work
+                </a>
+                <a href="#contact" class="btn-secondary-custom">
+                    <i class="bi bi-envelope"></i> Get In Touch
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <i class="bi bi-chevron-double-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-content">
+            <div class="about-image animate-on-scroll">
+                <img src="img/pi2.jpg" alt="Alisha Patel">
+            </div>
+            <div class="about-text">
+                <h2 class="animate-on-scroll"><span class="font-primary">A</span>bout Me</h2>
+                <p class="animate-on-scroll">
+                    Hey there! I'm Alisha Patel, a passionate front-end web developer with a keen eye for design 
+                    and a love for creating seamless user experiences. I specialize in building responsive, 
+                    accessible, and performant web applications that make a difference.
+                </p>
+                <p class="animate-on-scroll">
+                    My journey in web development started with curiosity and has evolved into a dedicated pursuit 
+                    of crafting digital solutions that combine aesthetics with functionality. I believe in 
+                    continuous learning and staying updated with the latest technologies.
+                </p>
+                <div class="about-info animate-on-scroll">
+                    <div class="info-item">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>Based in USA</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="bi bi-briefcase"></i>
+                        <span>Available for Work</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="bi bi-code-slash"></i>
+                        <span>Full Stack Focus</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="bi bi-lightning"></i>
+                        <span>Fast Learner</span>
+                    </div>
+                </div>
+                <div class="social-icons animate-on-scroll">
+                    <a href="https://github.com/Alisha313" class="social-icon" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/alisha-p-b636381b3/" class="social-icon" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="mailto:alishap1924@gmail.com" class="social-icon" aria-label="Email">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="skills-container">
+            <h2 class="section-title animate-on-scroll"><span class="font-primary">S</span>kills & Expertise</h2>
+            
+            <div class="skills-grid">
+                <!-- Skill Bars -->
+                <div class="glass-card">
+                    <h3 class="mb-4">Technical Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML5 / CSS3</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percentage="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript / jQuery</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percentage="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Python / Django</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percentage="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Bootstrap / Tailwind</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percentage="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Git / GitHub</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percentage="85"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Circular Progress -->
+                <div class="glass-card">
+                    <h3 class="mb-4">Core Competencies</h3>
+                    <div class="circular-skills">
+                        <svg width="0" height="0">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00ABAE" />
+                                    <stop offset="100%" stop-color="#8B5CF6" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        
+                        <div class="circular-progress">
+                            <svg width="140" height="140" class="progress-ring">
+                                <circle class="progress-ring-bg" cx="70" cy="70" r="54"></circle>
+                                <circle class="progress-ring-fill" cx="70" cy="70" r="54" data-percentage="90"></circle>
+                            </svg>
+                            <div class="circular-progress-content">
+                                <div class="circular-progress-value">90%</div>
+                                <div class="circular-progress-label">Frontend</div>
+                            </div>
+                        </div>
+                        
+                        <div class="circular-progress">
+                            <svg width="140" height="140" class="progress-ring">
+                                <circle class="progress-ring-bg" cx="70" cy="70" r="54"></circle>
+                                <circle class="progress-ring-fill" cx="70" cy="70" r="54" data-percentage="75"></circle>
+                            </svg>
+                            <div class="circular-progress-content">
+                                <div class="circular-progress-value">75%</div>
+                                <div class="circular-progress-label">Backend</div>
+                            </div>
+                        </div>
+                        
+                        <div class="circular-progress">
+                            <svg width="140" height="140" class="progress-ring">
+                                <circle class="progress-ring-bg" cx="70" cy="70" r="54"></circle>
+                                <circle class="progress-ring-fill" cx="70" cy="70" r="54" data-percentage="85"></circle>
+                            </svg>
+                            <div class="circular-progress-content">
+                                <div class="circular-progress-value">85%</div>
+                                <div class="circular-progress-label">UI/UX</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Tech Icons -->
+            <div class="floating-icons animate-on-scroll">
+                <div class="float-icon">
+                    <i class="bi bi-filetype-html"></i>
+                    <span class="tooltip">HTML5</span>
+                </div>
+                <div class="float-icon">
+                    <i class="bi bi-filetype-css"></i>
+                    <span class="tooltip">CSS3</span>
+                </div>
+                <div class="float-icon">
+                    <i class="bi bi-filetype-js"></i>
+                    <span class="tooltip">JavaScript</span>
+                </div>
+                <div class="float-icon">
+                    <i class="bi bi-filetype-py"></i>
+                    <span class="tooltip">Python</span>
+                </div>
+                <div class="float-icon">
+                    <i class="bi bi-bootstrap"></i>
+                    <span class="tooltip">Bootstrap</span>
+                </div>
+                <div class="float-icon">
+                    <i class="bi bi-git"></i>
+                    <span class="tooltip">Git</span>
+                </div>
+                <div class="float-icon">
+                    <i class="bi bi-github"></i>
+                    <span class="tooltip">GitHub</span>
+                </div>
+                <div class="float-icon">
+                    <i class="bi bi-database"></i>
+                    <span class="tooltip">Databases</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="project">
+        <h2 class="section-title animate-on-scroll"><span class="font-primary">P</span>rojects</h2>
+        
+        <div class="projects-grid">
+            <!-- Project 1: Foot Commerce -->
+            <div class="project-card">
+                <div class="video-wrapper">
+                    <video class="lazy-video" muted loop playsinline poster="img/project-thumb.jpg">
+                        <source src="video/IMG_5825.MP4" type="video/mp4">
+                    </video>
+                    <div class="video-play-btn">
+                        <i class="bi bi-play-fill"></i>
+                    </div>
+                    <div class="video-overlay">
+                        <span class="text-white">Click to play</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Foot Commerce</h3>
+                    <p class="project-description">
+                        A mini e-commerce platform with sign up/sign in functionality. Order footwear with a simple 
+                        click, add items to cart, and checkout with address details.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Heroku</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://foot-commerce-frontend.herokuapp.com/" target="_blank" class="project-link">
+                            <i class="bi bi-globe"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/Alisha313/foot-commerce" target="_blank" class="project-link">
+                            <i class="bi bi-github"></i> Code
+                        </a>
+                        <button class="project-expand-btn" aria-label="Expand project">
+                            <i class="bi bi-arrows-fullscreen"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: SubMarine Pizzeria -->
+            <div class="project-card">
+                <div class="video-wrapper">
+                    <video class="lazy-video" muted loop playsinline>
+                        <source src="video/Submarine Pizzeria.MP4" type="video/mp4">
+                    </video>
+                    <div class="video-play-btn">
+                        <i class="bi bi-play-fill"></i>
+                    </div>
+                    <div class="video-overlay">
+                        <span class="text-white">Click to play</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">SubMarine Pizzeria</h3>
+                    <p class="project-description">
+                        An e-commerce project for ordering pizzas with user authentication. Features cart 
+                        functionality and checkout with address management.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">jQuery</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Cloudinary</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://frontend-sd-alisha.herokuapp.com/" target="_blank" class="project-link">
+                            <i class="bi bi-globe"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/Alisha313/Submarine-Pizzeria" target="_blank" class="project-link">
+                            <i class="bi bi-github"></i> Code
+                        </a>
+                        <button class="project-expand-btn" aria-label="Expand project">
+                            <i class="bi bi-arrows-fullscreen"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Twitter Clone -->
+            <div class="project-card">
+                <div class="video-wrapper">
+                    <video class="lazy-video" muted loop playsinline>
+                        <source src="video/twitter clone.MP4" type="video/mp4">
+                    </video>
+                    <div class="video-play-btn">
+                        <i class="bi bi-play-fill"></i>
+                    </div>
+                    <div class="video-overlay">
+                        <span class="text-white">Click to play</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Twitter Clone</h3>
+                    <p class="project-description">
+                        A social platform for anonymous expression. Post, edit, or delete tweets with full 
+                        CRUD functionality. No account needed for complete anonymity.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Cloudinary</span>
+                        <span class="tech-tag">Heroku</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://twitterclone-alisha.herokuapp.com/" target="_blank" class="project-link">
+                            <i class="bi bi-globe"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/Alisha313/Twitter-Clone" target="_blank" class="project-link">
+                            <i class="bi bi-github"></i> Code
+                        </a>
+                        <button class="project-expand-btn" aria-label="Expand project">
+                            <i class="bi bi-arrows-fullscreen"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2 class="section-title animate-on-scroll"><span class="font-primary">G</span>et In Touch</h2>
+            <p class="text-center mb-5 animate-on-scroll" style="color: var(--text-secondary);">
+                Have a project in mind or want to collaborate? I'd love to hear from you!
+            </p>
+            
+            <form id="contactForm" class="contact-form glass-card animate-on-scroll">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Tell me about your project..."></textarea>
+                    <span class="error-message"></span>
+                </div>
+                <button type="submit" class="form-submit">
+                    <i class="bi bi-send"></i> Send Message
+                </button>
+            </form>
+
+            <div class="text-center mt-5 animate-on-scroll">
+                <p style="color: var(--text-muted);">Or reach out directly:</p>
+                <a href="mailto:alishap1924@gmail.com" class="btn-primary-custom mt-3">
+                    <i class="bi bi-envelope"></i> alishap1924@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal">
+        <button class="modal-close" aria-label="Close modal">
+            <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="modal-content">
+            <video class="modal-video" controls></video>
+            <div class="modal-body">
+                <h3 class="modal-title"></h3>
+                <div class="modal-description"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/Alisha313" class="social-icon" aria-label="GitHub">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/alisha-p-b636381b3/" class="social-icon" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="mailto:alishap1924@gmail.com" class="social-icon" aria-label="Email">
+                <i class="bi bi-envelope"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 Alisha Patel. Crafted with <i class="bi bi-heart-fill text-gradient"></i> and code.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
