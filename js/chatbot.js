@@ -38,21 +38,49 @@
     java: {
       patterns: [/\bjava\b(?!\s*script)/i, /\bspring\s*boot\b/i, /\bjpa\b/i],
       responses: [
-        "Java is one of Alisha's primary languages! She's built scalable Spring Boot microservices at JPMorgan Chase for high-volume financial transactions, and developed REST APIs with Spring Boot and PostgreSQL at Revature, improving query performance by 40%. She's also worked with JPA, Kafka, and Maven."
+        "**Java** — Alisha has ~2 years of professional experience. **Projects:** JPMorgan Chase microservices (high-volume transactions), Revature REST APIs (40% query improvement), Banking System (Spring Boot backend), Expense Reimbursement System, Forage Kafka simulation. She uses Spring Boot, JPA, Kafka, and Maven."
       ]
     },
 
     python: {
       patterns: [/\bpython\b/i, /\bdjango\b/i, /\bflask\b/i],
       responses: [
-        "Alisha works extensively with Python! At JPMorgan Chase she built Python Flask microservices. She also uses Python for ML projects — she built a heart disease classification pipeline using Scikit-learn, Pandas, and SHAP. For boot camp projects, she built Django backends for apps like Twitter Clone, Submarine Pizzeria, and Foot Commerce."
+        "**Python** — Alisha has ~2 years of experience. **Projects:** JPMorgan Chase Flask microservices, ML Cleveland Heart Disease (Scikit-learn, SHAP), Twitter Clone (Django), Submarine Pizzeria (Django REST API), Foot Commerce (Django). She uses Flask, Django, Pandas, and Scikit-learn."
       ]
     },
 
     javascript: {
       patterns: [/\bjavascript\b/i, /\breact\b/i, /\bnext\.?js\b/i, /\bnode\.?js\b/i, /\bredux\b/i, /\bfrontend\b/i, /\bfront.?end\b/i],
       responses: [
-        "On the JavaScript side, Alisha has experience with React, Redux, Next.js, and Node.js. At Revature, she built responsive React.js interfaces with optimized state management and designed Node.js backends with MongoDB. Her Revature Banking System project used a Next.js/TypeScript frontend built with Vite."
+        "**JavaScript** — Alisha has ~1.5 years of experience. **Projects:** Revature React interfaces, Banking System (Next.js/TypeScript), Expense Reimbursement (React/Tailwind), Submarine Pizzeria & Foot Commerce (React/Redux), Own It Property Calculator, Bare Beauty. She uses React, Redux, Next.js, and Node.js."
+      ]
+    },
+
+    csharp: {
+      patterns: [/\bc#\b/i, /\bcsharp\b/i],
+      responses: [
+        "**C#** — Alisha has foundational experience through the Microsoft freeCodeCamp certification. She's completed the Foundational C# certification and is ready to apply it in real projects."
+      ]
+    },
+
+    sql: {
+      patterns: [/\bsql\b/i, /\bpostgres\b/i, /\bmysql\b/i, /\bpostgresql\b/i],
+      responses: [
+        "**SQL** — Alisha has ~2 years of experience. **Projects:** PostgreSQL at JPMorgan Chase and Revature (REST APIs, Banking System, Expense Reimbursement), MySQL in general projects, H2 for embedded testing. She's optimized queries and achieved 40% performance improvements."
+      ]
+    },
+
+    php: {
+      patterns: [/\bphp\b/i],
+      responses: [
+        "**PHP** — Alisha has used PHP in the Own It Property Calculator project for property investment analysis. She's comfortable with backend PHP for web applications."
+      ]
+    },
+
+    html_css: {
+      patterns: [/\bhtml\b/i, /\bcss\b/i, /\bhtml\s*css\b/i],
+      responses: [
+        "**HTML/CSS** — Alisha has extensive experience across projects. **Projects:** Bare Beauty (e-commerce UI), Own It Property Calculator, Revature React apps (with Tailwind CSS), and this portfolio! She builds responsive, accessible interfaces."
       ]
     },
 
@@ -272,7 +300,7 @@
         <div class="chatbot-header">
           <div class="chatbot-header-info">
             <div class="chatbot-avatar">
-              <i class="ph-fill ph-robot"></i>
+              <img src="assets/alisha-photo.png" alt="Alisha" class="chatbot-avatar-img">
             </div>
             <div>
               <span class="chatbot-header-name">${BOT_NAME}</span>

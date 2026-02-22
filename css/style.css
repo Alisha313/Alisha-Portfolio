@@ -1450,6 +1450,14 @@ button { font-family: var(--ff); }
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.chatbot-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .chatbot-avatar i {
