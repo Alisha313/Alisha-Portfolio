@@ -1869,12 +1869,17 @@ button { font-family: var(--ff); }
   .bento-bio { padding: 1.5rem; }
 
   .bento-photo {
-    min-height: auto;
-    padding: 1.5rem;
+    min-height: 0;
+    padding: 1.25rem;
     order: -1;
   }
 
-  .photo-portrait { width: 150px; height: 150px; }
+  .bento-photo .photo-wrapper {
+    width: auto;
+    height: auto;
+  }
+
+  .photo-portrait { width: 140px; height: 140px; }
 
   /* Skills */
   .skills-bento {
