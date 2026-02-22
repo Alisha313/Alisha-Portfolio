@@ -1788,6 +1788,73 @@ button { font-family: var(--ff); }
 }
 
 /* =========================================
+   MOBILE MENU OVERLAY
+   ========================================= */
+.mobile-menu-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: var(--bg);
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s var(--ease);
+  }
+
+  .mobile-menu-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .mobile-menu-link {
+    font-family: var(--ff);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .mobile-menu-link:hover {
+    color: var(--accent);
+  }
+
+  .mobile-menu-cta {
+    margin-top: 0.5rem;
+    padding: 0.6rem 2rem;
+    border-radius: var(--r-full);
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .mobile-menu-cta:hover {
+    background: var(--accent-hover);
+    color: #fff;
+  }
+}
+
+/* =========================================
    RESPONSIVE
    ========================================= */
 
@@ -1804,60 +1871,8 @@ button { font-family: var(--ff); }
 
 @media (max-width: 768px) {
 
-  /* Nav — remove backdrop-filter so fixed menu can escape navbar */
-  .navbar {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    background: var(--bg);
-  }
-
-  .navbar.scrolled {
-    background: var(--bg);
-  }
-
+  .nav-menu-desktop { display: none; }
   .nav-toggle { display: flex; z-index: 10002; }
-
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    height: 100dvh;
-    background: var(--bg);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s var(--ease);
-    z-index: 10001;
-  }
-
-  .nav-menu.open {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .nav-link {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-primary);
-  }
-
-  .nav-link::after { display: none; }
-
-  .nav-link-cta {
-    margin-top: 0.5rem;
-    padding: 0.6rem 2rem;
-    border-radius: var(--r-full);
-    background: var(--accent);
-    color: #fff;
-    -webkit-text-fill-color: #fff;
-  }
 
   /* Bento about — switch to flex stack on mobile */
   .bento-about {

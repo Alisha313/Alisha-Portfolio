@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollProgress = document.getElementById('scrollProgress');
   const navbar = document.getElementById('navbar');
   const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
+  const mobileOverlay = document.getElementById('mobileMenuOverlay');
   const navLinks = document.querySelectorAll('.nav-link');
+  const mobileLinks = document.querySelectorAll('.mobile-menu-link');
   const contactForm = document.getElementById('contactForm');
 
   /* =========================================
@@ -34,13 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('active');
-    navMenu.classList.toggle('open');
+    mobileOverlay.classList.toggle('open');
   });
 
-  navLinks.forEach((link) => {
+  mobileLinks.forEach((link) => {
     link.addEventListener('click', () => {
       navToggle.classList.remove('active');
-      navMenu.classList.remove('open');
+      mobileOverlay.classList.remove('open');
     });
   });
 
