@@ -1804,12 +1804,28 @@ button { font-family: var(--ff); }
 
 @media (max-width: 768px) {
 
-  /* Nav */
-  .nav-toggle { display: flex; }
+  /* Nav — remove backdrop-filter so fixed menu can escape navbar */
+  .navbar {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: var(--bg);
+  }
+
+  .navbar.scrolled {
+    background: var(--bg);
+  }
+
+  .nav-toggle { display: flex; z-index: 10002; }
 
   .nav-menu {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
     background: var(--bg);
     flex-direction: column;
     align-items: center;
@@ -1818,16 +1834,12 @@ button { font-family: var(--ff); }
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s var(--ease);
-    z-index: 10000;
+    z-index: 10001;
   }
 
   .nav-menu.open {
     opacity: 1;
     pointer-events: auto;
-  }
-
-  .nav-toggle {
-    z-index: 10001;
   }
 
   .nav-link {
@@ -1836,12 +1848,15 @@ button { font-family: var(--ff); }
     color: var(--text-primary);
   }
 
+  .nav-link::after { display: none; }
+
   .nav-link-cta {
     margin-top: 0.5rem;
     padding: 0.6rem 2rem;
     border-radius: var(--r-full);
     background: var(--accent);
     color: #fff;
+    -webkit-text-fill-color: #fff;
   }
 
   /* Bento about */
