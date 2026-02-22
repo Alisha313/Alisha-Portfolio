@@ -1810,13 +1810,11 @@ button { font-family: var(--ff); }
   .nav-menu {
     position: fixed;
     inset: 0;
-    background: rgba(250, 248, 245, 0.97);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: var(--bg);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s var(--ease);
@@ -1828,7 +1826,23 @@ button { font-family: var(--ff); }
     pointer-events: auto;
   }
 
-  .nav-link { font-size: 1.5rem; font-weight: 600; color: var(--text-primary); }
+  .nav-toggle {
+    z-index: 10001;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .nav-link-cta {
+    margin-top: 0.5rem;
+    padding: 0.6rem 2rem;
+    border-radius: var(--r-full);
+    background: var(--accent);
+    color: #fff;
+  }
 
   /* Bento about */
   .bento-about {
