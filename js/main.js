@@ -33,9 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 60);
   }, { passive: true });
 
+  const mobileMenuClose = document.getElementById('mobileMenuClose');
+
   navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('active');
     mobileOverlay.classList.toggle('open');
+  });
+
+  mobileMenuClose.addEventListener('click', () => {
+    navToggle.classList.remove('active');
+    mobileOverlay.classList.remove('open');
   });
 
   mobileLinks.forEach((link) => {

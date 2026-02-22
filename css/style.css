@@ -1817,6 +1817,33 @@ button { font-family: var(--ff); }
     pointer-events: auto;
   }
 
+  .mobile-menu-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: background 0.3s, border-color 0.3s;
+  }
+
+  .mobile-menu-close i {
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu-close:hover {
+    background: var(--surface-2);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
   .mobile-menu-list {
     list-style: none;
     padding: 0;
