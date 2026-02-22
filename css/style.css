@@ -1821,27 +1821,29 @@ button { font-family: var(--ff); }
     position: absolute;
     top: 1.25rem;
     right: 1.25rem;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: var(--surface);
-    border: 1px solid var(--border);
+    border: 2px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     color: var(--text-primary);
-    transition: background 0.3s, border-color 0.3s;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
   }
 
   .mobile-menu-close i {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 
-  .mobile-menu-close:hover {
-    background: var(--surface-2);
+  .mobile-menu-close:hover,
+  .mobile-menu-close:focus {
+    background: var(--accent);
     border-color: var(--accent);
-    color: var(--accent);
+    color: #fff;
   }
 
   .mobile-menu-list {
