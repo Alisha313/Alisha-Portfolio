@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alisha | Software Engineer</title>
+  <meta name="description" content="Portfolio of Alisha — Software Engineer building scalable microservices in Java & Python.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/fill/style.css">
+</head>
+<body>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>A<span class="logo-bracket">/&gt;</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+        <li><a href="#experience" class="nav-link" data-text="Experience">Experience</a></li>
+        <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
+        <li><a href="#education" class="nav-link" data-text="Education">Education</a></li>
+        <li><a href="#contact" class="nav-link nav-link-cta" data-text="Contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <canvas class="constellation-canvas" id="constellationCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open to Opportunities
+      </div>
+      <h1 class="hero-name" data-splitting>
+        <span class="line"><span class="line-inner">Hi, I'm Alisha</span></span>
+      </h1>
+      <h2 class="hero-title">
+        <span class="title-static">I build </span>
+        <span class="title-rotate" id="titleRotate">
+          <span class="rotate-word active">scalable microservices</span>
+          <span class="rotate-word">cloud infrastructure</span>
+          <span class="rotate-word">full-stack applications</span>
+          <span class="rotate-word">CI/CD pipelines</span>
+        </span>
+      </h2>
+      <p class="hero-tagline">
+        Software Engineer crafting high-performance Java &amp; Python systems
+        in financial and cloud-based environments.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-magnetic">
+          <span class="btn-magnetic-inner">
+            <span class="btn-text">Explore My Work</span>
+            <span class="btn-icon"><i class="ph ph-arrow-down"></i></span>
+          </span>
+        </a>
+        <a href="assets/Alisha_Patel_Resume.pdf" class="btn-ghost-glow" target="_blank" rel="noopener noreferrer">
+          <span><i class="ph ph-file-pdf"></i> Resume</span>
+        </a>
+        <a href="#contact" class="btn-ghost-glow">
+          <span>Let's Talk</span>
+        </a>
+      </div>
+      <div class="hero-tech-stack">
+        <span class="tech-label">Tech I love:</span>
+        <div class="tech-icons">
+          <span class="tech-chip">Java</span>
+          <span class="tech-chip">Python</span>
+          <span class="tech-chip">Spring Boot</span>
+          <span class="tech-chip">AWS</span>
+          <span class="tech-chip">React</span>
+          <span class="tech-chip">Docker</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">01 / About</span>
+      </div>
+      <div class="bento-grid bento-about">
+        <div class="bento-card bento-bio glass-card">
+          <h2 class="bento-heading">
+            I'm a software engineer who loves
+            <span class="gradient-text">building things that scale.</span>
+          </h2>
+          <p>
+            Currently finishing my B.S. in Computer Science at <strong>Kean University</strong> (Dec 2026),
+            I've spent the last few years working on real production systems — from high-volume transaction
+            microservices at <strong>JPMorgan Chase</strong> to full-stack applications at <strong>Revature</strong>.
+          </p>
+          <p>
+            I'm passionate about clean architecture, performant APIs, and cloud-native solutions.
+            When I'm not coding, I'm probably exploring new AWS services or tinkering with ML models.
+          </p>
+        </div>
+
+        <div class="bento-card bento-stat glass-card">
+          <div class="stat-value" data-count="3">0</div>
+          <div class="stat-label">Engineering<br>Roles</div>
+        </div>
+
+        <div class="bento-card bento-stat glass-card">
+          <div class="stat-value stat-text">30%</div>
+          <div class="stat-label">API Speed<br>Improvement</div>
+        </div>
+
+        <div class="bento-card bento-cert glass-card">
+          <div class="cert-badge">
+            <i class="ph-fill ph-certificate"></i>
+          </div>
+          <div class="cert-text">
+            <span class="cert-title">AWS Certified</span>
+            <span class="cert-sub">Cloud Practitioner</span>
+          </div>
+        </div>
+
+        <div class="bento-card bento-photo glass-card">
+          <div class="photo-wrapper">
+            <div class="photo-placeholder-modern">
+              <i class="ph ph-user-circle"></i>
+              <span>Your Photo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">02 / Experience</span>
+      </div>
+      <h2 class="section-heading">Where I've <span class="gradient-text">Worked</span></h2>
+
+      <div class="exp-list">
+        <div class="exp-card glass-card">
+          <div class="exp-top">
+            <div class="exp-company-badge">
+              <span class="company-icon"><i class="ph ph-buildings"></i></span>
+              <div>
+                <h3 class="exp-role">Software Engineering Job Simulation</h3>
+                <p class="exp-company">JPMorgan Chase (Forage)</p>
+              </div>
+            </div>
+            <span class="exp-date">Jan 2026</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Built a Spring Boot microservice that consumes high-volume Kafka transaction events, validates data, and persists records using Spring Data JPA with an H2 SQL database.</li>
+            <li>Integrated an external REST Incentive API into the transaction workflow and exposed a REST endpoint for querying user balances in JSON format.</li>
+            <li>Tested and verified system reliability using Maven test suites and embedded Kafka, ensuring correct message processing, database updates, and API interactions.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Spring Boot</span>
+            <span class="exp-tag">Kafka</span>
+            <span class="exp-tag">REST API</span>
+            <span class="exp-tag">JPA</span>
+          </div>
+        </div>
+
+        <div class="exp-card glass-card">
+          <div class="exp-top">
+            <div class="exp-company-badge">
+              <span class="company-icon"><i class="ph ph-storefront"></i></span>
+              <div>
+                <h3 class="exp-role">Task Associate</h3>
+                <p class="exp-company">Ulta Beauty &mdash; Woodbridge, NJ</p>
+              </div>
+            </div>
+            <span class="exp-date">Sept 2025 &ndash; Present</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Unload and organize incoming merchandise shipments efficiently.</li>
+            <li>Stock shelves and maintain accurate backroom inventory.</li>
+            <li>Assist with visual merchandising and promotional displays.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Operations</span>
+            <span class="exp-tag">Inventory</span>
+            <span class="exp-tag">Merchandising</span>
+          </div>
+        </div>
+
+        <div class="exp-card glass-card">
+          <div class="exp-top">
+            <div class="exp-company-badge">
+              <span class="company-icon"><i class="ph ph-buildings"></i></span>
+              <div>
+                <h3 class="exp-role">Software Engineer (Contract)</h3>
+                <p class="exp-company">JPMorgan Chase &mdash; Newport, NJ</p>
+              </div>
+            </div>
+            <span class="exp-date">Sept 2023 &ndash; Jun 2024</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Designed and deployed scalable Java Spring Boot and Python Flask microservices supporting high-volume financial transactions across multiple services.</li>
+            <li>Built CI/CD pipelines with Jenkins and Docker to streamline deployments and improve release reliability.</li>
+            <li>Implemented Redis caching and optimized database queries, improving API response times by 30%.</li>
+            <li>Created API documentation and onboarding tools to improve developer productivity and reduce setup time.</li>
+            <li>Collaborated with cross-functional teams to ensure applications met PCI-DSS and enterprise security standards.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Java</span>
+            <span class="exp-tag">Python</span>
+            <span class="exp-tag">Jenkins</span>
+            <span class="exp-tag">Docker</span>
+            <span class="exp-tag">Redis</span>
+          </div>
+        </div>
+
+        <div class="exp-card glass-card">
+          <div class="exp-top">
+            <div class="exp-company-badge">
+              <span class="company-icon"><i class="ph ph-code"></i></span>
+              <div>
+                <h3 class="exp-role">Full Stack Java Developer</h3>
+                <p class="exp-company">Revature &mdash; Edison, NJ</p>
+              </div>
+            </div>
+            <span class="exp-date">May 2023 &ndash; Sept 2023</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Developed REST APIs with Java Spring Boot and PostgreSQL, improving query performance by 40%.</li>
+            <li>Built responsive React.js interfaces with optimized state management for faster rendering.</li>
+            <li>Designed Node.js backends with MongoDB to support high-availability applications.</li>
+            <li>Collaborated in Agile teams using Git and Bitbucket for version control and delivery.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Spring Boot</span>
+            <span class="exp-tag">React.js</span>
+            <span class="exp-tag">Node.js</span>
+            <span class="exp-tag">MongoDB</span>
+            <span class="exp-tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">03 / Skills</span>
+      </div>
+      <h2 class="section-heading">My <span class="gradient-text">Toolbox</span></h2>
+
+      <div class="skills-bento">
+        <div class="skill-bento-card glass-card">
+          <div class="skill-icon-wrap"><i class="ph ph-terminal-window"></i></div>
+          <h3>Languages</h3>
+          <div class="skill-list">
+            <span>Java</span><span>Python</span><span>JavaScript</span><span>C#</span><span>SQL</span><span>PHP</span><span>HTML/CSS</span><span>Shell</span>
+          </div>
+        </div>
+
+        <div class="skill-bento-card glass-card">
+          <div class="skill-icon-wrap"><i class="ph ph-stack"></i></div>
+          <h3>Frameworks & Libraries</h3>
+          <div class="skill-list">
+            <span>Spring Boot</span><span>Django</span><span>Flask</span><span>React</span><span>Redux</span><span>Next.js</span><span>Node.js</span><span>Pandas</span><span>Scikit-learn</span><span>Kafka</span>
+          </div>
+        </div>
+
+        <div class="skill-bento-card glass-card">
+          <div class="skill-icon-wrap"><i class="ph ph-brain"></i></div>
+          <h3>ML & Data</h3>
+          <div class="skill-list">
+            <span>Supervised Learning</span><span>Classification</span><span>Regression</span><span>Clustering</span><span>Data Preprocessing</span><span>Feature Engineering</span><span>Model Evaluation</span><span>SHAP Interpretation</span>
+          </div>
+        </div>
+
+        <div class="skill-bento-card glass-card">
+          <div class="skill-icon-wrap"><i class="ph ph-cloud"></i></div>
+          <h3>Cloud (AWS)</h3>
+          <div class="skill-list">
+            <span>EC2</span><span>S3</span><span>Lambda</span><span>RDS</span><span>CloudFormation</span><span>DynamoDB</span><span>SQS</span><span>SNS</span>
+          </div>
+        </div>
+
+        <div class="skill-bento-card glass-card">
+          <div class="skill-icon-wrap"><i class="ph ph-git-branch"></i></div>
+          <h3>DevOps</h3>
+          <div class="skill-list">
+            <span>Docker</span><span>Jenkins</span><span>Git</span><span>GitLab CI/CD</span><span>Bitbucket</span>
+          </div>
+        </div>
+
+        <div class="skill-bento-card glass-card">
+          <div class="skill-icon-wrap"><i class="ph ph-database"></i></div>
+          <h3>Databases</h3>
+          <div class="skill-list">
+            <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Redis</span><span>H2</span>
+          </div>
+        </div>
+
+        <div class="skill-bento-card glass-card">
+          <div class="skill-icon-wrap"><i class="ph ph-test-tube"></i></div>
+          <h3>Testing</h3>
+          <div class="skill-list">
+            <span>JUnit</span><span>PyTest</span><span>Selenium</span><span>Mockito</span><span>Postman</span>
+          </div>
+        </div>
+
+        <div class="skill-bento-card glass-card">
+          <div class="skill-icon-wrap"><i class="ph ph-tree-structure"></i></div>
+          <h3>Core CS</h3>
+          <div class="skill-list">
+            <span>Data Structures</span><span>Algorithms</span><span>OOP</span><span>REST APIs</span><span>Agile</span><span>SDLC</span><span>System Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">04 / Projects</span>
+      </div>
+      <h2 class="section-heading">Featured <span class="gradient-text">Work</span></h2>
+      <p class="section-sub">A selection of projects from college, bootcamp, and professional training.</p>
+
+      <div class="project-categories">
+
+        <!-- ── College Projects ── -->
+        <div class="project-category">
+          <div class="category-heading">
+            <span class="category-label"><i class="ph ph-graduation-cap"></i> College Projects</span>
+          </div>
+          <div class="project-grid">
+
+            <div class="project-card glass-card">
+              <div class="project-card-icon"><i class="ph ph-heart-half"></i></div>
+              <h3>ML Cleveland Heart Disease</h3>
+              <p class="project-desc">
+                Built a classification pipeline on the UCI Cleveland dataset (297 patients, 13 features)
+                comparing Logistic Regression, Random Forest, KNN, and SVM. Used SHAP values
+                to interpret predictions and identified thalassemia, chest pain type, and major
+                vessels as the strongest heart disease predictors.
+              </p>
+              <div class="project-stack">
+                <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>SHAP</span><span>Matplotlib</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://colab.research.google.com/github/Alisha313/ML-Heart-Disease-Prediction/blob/main/Project_1_.ipynb" class="project-code-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-play-circle"></i> Live Notebook</a>
+                <a href="https://github.com/Alisha313/ML-Heart-Disease-Prediction" class="project-code-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-github-logo"></i> Source</a>
+              </div>
+            </div>
+
+            <div class="project-card glass-card">
+              <div class="project-card-icon"><i class="ph ph-house-line"></i></div>
+              <h3>Own It Property Calculator</h3>
+              <p class="project-desc">
+                Single-page property calculator app with sales, rentals, and mortgage
+                estimate pages. Uses the NPV formula, 50% rule, and cap rate analysis
+                to help investors compare rental properties by cash flow and ROI.
+              </p>
+              <div class="project-stack">
+                <span>JavaScript</span><span>HTML/CSS</span><span>PHP</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://alisha313.github.io/OwnItPropertyCalculator" class="project-code-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-play-circle"></i> Live Demo</a>
+                <a href="https://github.com/Alisha313/OwnItPropertyCalculator" class="project-code-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-github-logo"></i> Source</a>
+              </div>
+            </div>
+
+            <div class="project-card glass-card">
+              <div class="project-card-icon"><i class="ph ph-flower-lotus"></i></div>
+              <h3>Bare Beauty</h3>
+              <p class="project-desc">
+                E-commerce beauty platform with product browsing, category filtering,
+                and a clean, responsive UI for skincare and cosmetics shopping.
+              </p>
+              <div class="project-stack">
+                <span>HTML/CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Alisha313/Bare-Beauty" class="project-code-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-github-logo"></i> Source</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Boot Camp Projects ── -->
+        <div class="project-category">
+          <div class="category-heading">
+            <span class="category-label"><i class="ph ph-laptop"></i> Boot Camp Projects</span>
+          </div>
+          <div class="project-grid">
+
+            <div class="project-card glass-card">
+              <div class="project-card-icon"><i class="ph ph-chat-circle-dots"></i></div>
+              <h3>Twitter Clone</h3>
+              <p class="project-desc">
+                Social media clone where users can post, edit, delete, and like tweets.
+                Built with Django on the backend, Bootstrap for styling, and Cloudinary
+                for image hosting on CDN.
+              </p>
+              <div class="project-stack">
+                <span>Django</span><span>Bootstrap</span><span>jQuery</span><span>Cloudinary</span><span>SQLite</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Alisha313/Twitter-Clone" class="project-code-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-github-logo"></i> Source</a>
+              </div>
+            </div>
+
+            <div class="project-card glass-card">
+              <div class="project-card-icon"><i class="ph ph-pizza"></i></div>
+              <h3>Submarine Pizzeria</h3>
+              <p class="project-desc">
+                Restaurant ordering app with a React &amp; Redux frontend for browsing
+                the menu and placing orders, backed by a Django REST API for
+                product data and order processing.
+              </p>
+              <div class="project-stack">
+                <span>React</span><span>Redux</span><span>Django</span><span>REST API</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Alisha313/Submarine-Pizzeria" class="project-code-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-github-logo"></i> Source</a>
+              </div>
+            </div>
+
+            <div class="project-card glass-card">
+              <div class="project-card-icon"><i class="ph ph-sneaker"></i></div>
+              <h3>Foot Commerce</h3>
+              <p class="project-desc">
+                E-commerce shoe store with a React &amp; Redux frontend for product
+                browsing and cart management, powered by a Django REST API backend
+                for inventory and order handling.
+              </p>
+              <div class="project-stack">
+                <span>React</span><span>Redux</span><span>Django</span><span>REST API</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Alisha313/foot-commerce" class="project-code-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-github-logo"></i> Source</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Revature Training ── -->
+        <div class="project-category">
+          <div class="category-heading">
+            <span class="category-label"><i class="ph ph-code"></i> Revature Training</span>
+          </div>
+          <div class="project-grid">
+
+            <div class="project-card glass-card">
+              <div class="project-card-icon"><i class="ph ph-bank"></i></div>
+              <h3>Banking System</h3>
+              <p class="project-desc">
+                Team project: full-stack banking app with account management and transaction
+                processing. Next.js/TypeScript frontend built with Vite, backed by a
+                Java Spring Boot REST API with PostgreSQL.
+              </p>
+              <div class="project-stack">
+                <span>Java</span><span>Spring Boot</span><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Alisha313/p2BankingSystem" class="project-code-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-github-logo"></i> Backend</a>
+                <a href="https://github.com/Alisha313/Scheduler-Frontend" class="project-code-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-github-logo"></i> Frontend</a>
+              </div>
+            </div>
+
+            <div class="project-card glass-card">
+              <div class="project-card-icon"><i class="ph ph-receipt"></i></div>
+              <h3>Expense Reimbursement System</h3>
+              <p class="project-desc">
+                Employees log in and submit expense requests; finance managers approve
+                or deny them. Role-based access with separate dashboards for
+                employees and managers, built on Spring Boot and React with Tailwind.
+              </p>
+              <div class="project-stack">
+                <span>Java</span><span>Spring Boot</span><span>React</span><span>Tailwind CSS</span><span>PostgreSQL</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Alisha313/Project1" class="project-code-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-github-logo"></i> Backend</a>
+                <a href="https://github.com/Alisha313/project1frontend" class="project-code-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-github-logo"></i> Frontend</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">05 / Education</span>
+      </div>
+      <h2 class="section-heading">Education & <span class="gradient-text">Certs</span></h2>
+
+      <div class="edu-row">
+        <div class="edu-card-modern glass-card">
+          <div class="edu-glow"></div>
+          <div class="edu-icon-modern"><i class="ph ph-graduation-cap"></i></div>
+          <h3>B.S. Computer Science</h3>
+          <p class="edu-place">Kean University</p>
+          <span class="edu-date-badge">Dec 2026</span>
+        </div>
+
+        <div class="edu-card-modern glass-card">
+          <div class="edu-glow"></div>
+          <div class="edu-icon-modern"><i class="ph ph-laptop"></i></div>
+          <h3>Full Stack Web Development</h3>
+          <p class="edu-place">TECH I.S</p>
+          <span class="edu-date-badge">Completed</span>
+          <a href="https://www.credly.com/badges/1084ba70-4dd5-4637-a586-73caf5020826?source=linked_in_profile" class="edu-cert-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-arrow-square-out"></i> View Credential</a>
+        </div>
+      </div>
+
+      <h3 class="edu-sub-heading">Certifications</h3>
+      <div class="edu-row edu-row-4">
+        <div class="edu-card-modern glass-card">
+          <div class="edu-glow"></div>
+          <div class="edu-icon-modern"><i class="ph ph-certificate"></i></div>
+          <h3>AWS Cloud Practitioner</h3>
+          <p class="edu-place">Amazon Web Services</p>
+          <span class="edu-date-badge">Certified</span>
+          <a href="https://www.credly.com/badges/5bebc334-7cd1-44f9-a33a-ebaef44e6ae8/linked_in_profile" class="edu-cert-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-arrow-square-out"></i> View Credential</a>
+        </div>
+
+        <div class="edu-card-modern glass-card">
+          <div class="edu-glow"></div>
+          <div class="edu-icon-modern"><i class="ph ph-buildings"></i></div>
+          <h3>Software Engineering Job Simulation</h3>
+          <p class="edu-place">JPMorgan Chase & Co.</p>
+          <span class="edu-date-badge">Completed</span>
+          <a href="https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_6976580eb1ee4126d0c4dce7_1769401354783_completion_certificate.pdf" class="edu-cert-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-arrow-square-out"></i> View Credential</a>
+        </div>
+
+        <div class="edu-card-modern glass-card">
+          <div class="edu-glow"></div>
+          <div class="edu-icon-modern"><i class="ph ph-code"></i></div>
+          <h3>Foundational C# with Microsoft</h3>
+          <p class="edu-place">freeCodeCamp</p>
+          <span class="edu-date-badge">Certified</span>
+          <a href="https://www.freecodecamp.org/certification/fcc-995b1166-5123-4468-af6c-d833b5862f51/foundational-c-sharp-with-microsoft" class="edu-cert-link" target="_blank" rel="noopener noreferrer"><i class="ph ph-arrow-square-out"></i> View Credential</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section-contact" id="contact">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">06 / Contact</span>
+      </div>
+      <div class="contact-hero">
+        <h2 class="contact-big-text">
+          Let's build<br>
+          <span class="gradient-text">something great.</span>
+        </h2>
+        <p class="contact-sub">
+          I'm always open to new opportunities, collaborations, or just a friendly chat.
+        </p>
+      </div>
+      <div class="contact-grid-modern">
+        <form class="contact-form-modern glass-card" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Alisha" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="hello@email.com" required>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-magnetic btn-submit">
+            <span class="btn-magnetic-inner">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-icon"><i class="ph ph-paper-plane-tilt"></i></span>
+            </span>
+          </button>
+        </form>
+        <div class="contact-socials">
+          <a href="mailto:alishap1924@gmail.com" class="social-card glass-card">
+            <i class="ph ph-envelope"></i>
+            <div>
+              <span class="social-label">Email</span>
+              <span class="social-value">alishap1924@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/alisha-patel98" class="social-card glass-card" target="_blank" rel="noopener noreferrer">
+            <i class="ph ph-linkedin-logo"></i>
+            <div>
+              <span class="social-label">LinkedIn</span>
+              <span class="social-value">in/alisha-patel98</span>
+            </div>
+          </a>
+          <a href="https://github.com/Alisha313" class="social-card glass-card" target="_blank" rel="noopener noreferrer">
+            <i class="ph ph-github-logo"></i>
+            <div>
+              <span class="social-label">GitHub</span>
+              <span class="social-value">Alisha313</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-modern">
+    <div class="container footer-flex">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-bracket">&lt;</span>A<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p>Designed & built by Alisha &mdash; 2026</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="mailto:alishap1924@gmail.com" aria-label="Email"><i class="ph ph-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/alisha-patel98" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="ph ph-linkedin-logo"></i></a>
+        <a href="https://github.com/Alisha313" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="ph ph-github-logo"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>
