@@ -35,6 +35,13 @@
       ]
     },
 
+    languages: {
+      patterns: [/\blanguages?\b/i, /\bprogramming languages?\b/i, /\bwhat languages?\b/i],
+      responses: [
+        "Alisha works with several languages. Here's a quick overview with projects and experience:\n\n• **Java** (~2 yrs) — JPMorgan microservices, Revature REST APIs, Banking System, Expense Reimbursement, Forage Kafka\n• **Python** (~2 yrs) — JPMorgan Flask, ML Heart Disease, Twitter Clone, Submarine Pizzeria, Foot Commerce\n• **JavaScript** (~1.5 yrs) — React apps, Banking System (Next.js), Expense Reimbursement, Own It Calculator, Bare Beauty\n• **SQL** (~2 yrs) — PostgreSQL at JPMorgan & Revature, MySQL, H2\n• **C#** — Foundational cert (freeCodeCamp)\n• **PHP** — Own It Property Calculator\n• **HTML/CSS** — Bare Beauty, Own It Calculator, portfolio\n\nAsk about any specific language for more detail!"
+      ]
+    },
+
     java: {
       patterns: [/\bjava\b(?!\s*script)/i, /\bspring\s*boot\b/i, /\bjpa\b/i],
       responses: [
