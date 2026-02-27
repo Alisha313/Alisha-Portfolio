@@ -73,32 +73,35 @@ export default function Contact() {
             className="contact-form-modern glass-card"
             onSubmit={handleSubmit}
           >
-            <div className="form-group-modern">
+            <div className="form-field">
+              <label htmlFor="contact-name">Name</label>
               <input
+                id="contact-name"
                 type="text"
                 name="name"
-                className="form-input-modern"
                 placeholder="Your Name"
                 value={form.name}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className="form-group-modern">
+            <div className="form-field">
+              <label htmlFor="contact-email">Email</label>
               <input
+                id="contact-email"
                 type="email"
                 name="email"
-                className="form-input-modern"
                 placeholder="Your Email"
                 value={form.email}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className="form-group-modern">
+            <div className="form-field">
+              <label htmlFor="contact-message">Message</label>
               <textarea
+                id="contact-message"
                 name="message"
-                className="form-input-modern"
                 placeholder="Your Message"
                 rows="5"
                 value={form.message}

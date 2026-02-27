@@ -22,19 +22,18 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer className="footer">
-      <div className="container footer-inner">
+    <footer className="footer-modern">
+      <div className="container footer-flex">
         <div className="footer-brand">
           <span className="footer-logo">A<span className="accent-dot">.</span></span>
-          <p className="footer-tagline">Building scalable solutions with clean code.</p>
+          <p>Building scalable solutions with clean code.</p>
         </div>
 
-        <nav className="footer-nav">
+        <nav className="footer-links">
           {FOOTER_LINKS.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="footer-link"
               onClick={(e) => smoothScroll(e, link.href)}
             >
               {link.label}
@@ -49,7 +48,7 @@ export default function Footer() {
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="footer-social-icon"
+              className=""
               aria-label={s.label}
             >
               <i className={`ph ${s.icon}`} />
