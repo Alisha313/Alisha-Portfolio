@@ -127,7 +127,7 @@ export default function Chatbot() {
         <div className="chatbot-header">
           <div className="chatbot-header-info">
             <div className="chatbot-avatar">
-              <img src="/assets/alisha-photo.png" alt="Alisha" className="chatbot-avatar-img" />
+              <img src={`${import.meta.env.BASE_URL}assets/alisha-photo.png`} alt="Alisha" className="chatbot-avatar-img" />
             </div>
             <div>
               <span className="chatbot-header-name">{BOT_NAME}</span>

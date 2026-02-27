@@ -36,7 +36,7 @@ export default function About() {
 
           <div className="bento-card bento-photo glass-card">
             <div className="photo-wrapper">
-              <img src="/assets/alisha-photo.png" alt="Alisha Patel" className="photo-portrait" />
+              <img src={`${import.meta.env.BASE_URL}assets/alisha-photo.png`} alt="Alisha Patel" className="photo-portrait" />
             </div>
           </div>
         </div>

@@ -185,7 +185,7 @@ export default function Hero() {
               <span className="btn-icon"><i className="ph ph-arrow-down" /></span>
             </span>
           </a>
-          <a href="/assets/Alisha_Patel_Resume.pdf" className="btn-ghost-glow" target="_blank" rel="noopener noreferrer">
+          <a href={`${import.meta.env.BASE_URL}assets/Alisha_Patel_Resume.pdf`} className="btn-ghost-glow" target="_blank" rel="noopener noreferrer">
             <span><i className="ph ph-file-pdf" /> Resume</span>
           </a>
           <a href="#contact" className="btn-ghost-glow" onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }) }}>
