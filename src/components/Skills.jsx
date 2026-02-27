@@ -56,13 +56,13 @@ export default function Skills() {
         <div className="skills-bento">
           {SKILLS.map((skill) => (
             <div key={skill.title} className="skill-bento-card glass-card">
-              <div className="skill-bento-icon">
+              <div className="skill-icon-wrap">
                 <i className={`ph ${skill.icon}`} />
               </div>
-              <h3 className="skill-bento-title">{skill.title}</h3>
-              <div className="skill-tag-list">
+              <h3>{skill.title}</h3>
+              <div className="skill-list">
                 {skill.items.map((item) => (
-                  <span key={item} className="skill-tag">{item}</span>
+                  <span key={item}>{item}</span>
                 ))}
               </div>
             </div>
