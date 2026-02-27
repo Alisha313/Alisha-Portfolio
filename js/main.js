@@ -238,11 +238,39 @@ document.addEventListener('DOMContentLoaded', () => {
       const btnText = btn.querySelector('.btn-text');
       const original = btnText.textContent;
       const formData = new FormData(contactForm);
+      const action = (contactForm.action || '').trim();
+      const isPlaceholderEndpoint = action.includes('YOUR_FORM_ID');
+
+      const openMailClientFallback = () => {
+        const senderName = (formData.get('name') || '').toString().trim();
+        const senderEmail = (formData.get('email') || '').toString().trim();
+        const message = (formData.get('message') || '').toString().trim();
+        const subject = encodeURIComponent(`Portfolio message from ${senderName || 'Visitor'}`);
+        const body = encodeURIComponent([
+          `Name: ${senderName}`,
+          `Email: ${senderEmail}`,
+          '',
+          'Message:',
+          message,
+        ].join('\n'));
+
+        window.location.href = `mailto:alishap1924@gmail.com?subject=${subject}&body=${body}`;
+      };
 
       btnText.textContent = 'Sending...';
       btn.style.pointerEvents = 'none';
 
-      fetch(contactForm.action, {
+      if (isPlaceholderEndpoint) {
+        openMailClientFallback();
+        btnText.textContent = 'Open Email App';
+        setTimeout(() => {
+          btnText.textContent = original;
+          btn.style.pointerEvents = '';
+        }, 2500);
+        return;
+      }
+
+      fetch(action, {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' },
@@ -253,12 +281,14 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.querySelector('.btn-magnetic-inner').style.background = '#5b9a6d';
             contactForm.reset();
           } else {
-            btnText.textContent = 'Error — Try Again';
+            openMailClientFallback();
+            btnText.textContent = 'Open Email App';
             btn.querySelector('.btn-magnetic-inner').style.background = '#b55a5a';
           }
         })
         .catch(() => {
-          btnText.textContent = 'Error — Try Again';
+          openMailClientFallback();
+          btnText.textContent = 'Open Email App';
           btn.querySelector('.btn-magnetic-inner').style.background = '#b55a5a';
         })
         .finally(() => {
