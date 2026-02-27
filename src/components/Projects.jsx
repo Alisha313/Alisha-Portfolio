@@ -83,11 +83,11 @@ function ProjectCard({ project }) {
       <div className="project-card-icon">
         <i className={`ph ${project.icon}`} />
       </div>
-      <h3 className="project-card-title">{project.title}</h3>
-      <p className="project-card-desc">{project.desc}</p>
-      <div className="project-card-tags">
+      <h3>{project.title}</h3>
+      <p className="project-desc">{project.desc}</p>
+      <div className="project-stack">
         {project.tags.map((t) => (
-          <span key={t} className="project-tag">{t}</span>
+          <span key={t}>{t}</span>
         ))}
       </div>
     </a>
@@ -107,8 +107,10 @@ export default function Projects() {
         </h2>
 
         {PROJECT_CATEGORIES.map((cat) => (
-          <div key={cat.label}>
-            <h3 className="project-category-label">{cat.label}</h3>
+          <div key={cat.label} className="project-category">
+            <div className="category-heading">
+              <span className="category-label">{cat.label}</span>
+            </div>
             <div className="project-grid">
               {cat.projects.map((p) => (
                 <ProjectCard key={p.title} project={p} />
