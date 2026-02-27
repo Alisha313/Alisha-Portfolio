@@ -1,22 +1,29 @@
 {
   "name": "alisha-portfolio",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "Personal portfolio website",
+  "type": "module",
+  "description": "Personal portfolio website built with React + Vite",
   "keywords": [
-    "html",
-    "css",
+    "react",
+    "vite",
     "javascript",
-    "php"
+    "gsap",
+    "portfolio",
+    "frontend"
   ],
-  "languageVersions": {
-    "html": "HTML5",
-    "css": "CSS3",
-    "javascript": "ES2023",
-    "php": ">=8.1"
-  },
   "scripts": {
-    "start": "php -S localhost:8000",
-    "dev": "php -S localhost:8000"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.0"
   }
 }
