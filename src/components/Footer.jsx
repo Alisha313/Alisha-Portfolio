@@ -48,7 +48,6 @@ export default function Footer() {
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className=""
               aria-label={s.label}
             >
               <i className={`ph ${s.icon}`} />

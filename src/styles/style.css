@@ -1314,6 +1314,27 @@ button { font-family: var(--ff); }
   background: var(--accent-light);
 }
 
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.accent-dot {
+  color: var(--accent);
+}
+
+.footer-copy {
+  width: 100%;
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
 /* =========================================
    CHATBOT
    ========================================= */
