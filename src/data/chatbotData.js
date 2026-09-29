@@ -12,98 +12,91 @@ export const knowledgeBase = {
   about: {
     patterns: [/\b(who|about|tell me about|introduce|background|bio)\b.*\b(alisha|her|she|yourself)\b/i, /\bwho is (alisha|she)\b/i, /\babout\b/i],
     responses: [
-      "Alisha is a Software Engineer finishing her B.S. in Computer Science at Kean University (Dec 2026). She's worked on production systems at JPMorgan Chase and built full-stack applications at Revature. She's passionate about clean architecture, performant APIs, and cloud-native solutions.",
-      "Alisha is a software engineer who builds things that scale. She has experience at JPMorgan Chase building microservices for financial transactions, and at Revature doing full-stack Java development. She's pursuing her CS degree at Kean University, graduating Dec 2026.",
+      "Alisha is a Senior Software Engineer in New Jersey with 5+ years in healthcare and health insurance. She leads Java 17 and Spring Boot services at Johnson & Johnson, and before that built member, claims, and provider systems at Oscar Health. She has a B.S. in Computer Science from Kean University and is an AWS Certified Cloud Practitioner.",
     ],
   },
   skills: {
     patterns: [/\b(skills?|tech stack|technologies|tools?|what (does|can) (she|alisha) (use|know|work with)|toolbox|proficien|expertise)\b/i],
     responses: [
-      "Alisha's core toolkit:\n\n**Languages:** Java, Python, JavaScript, C#, SQL, PHP\n**Frameworks:** Spring Boot, Django, Flask, React, Redux, Next.js, Node.js\n**Cloud (AWS):** EC2, S3, Lambda, RDS, CloudFormation, DynamoDB\n**DevOps:** Docker, Jenkins, Git, GitLab CI/CD\n**Databases:** PostgreSQL, MySQL, MongoDB, Redis\n**ML & Data:** Scikit-learn, Pandas, SHAP\n**Testing:** JUnit, PyTest, Selenium, Mockito, Postman",
+      "Alisha's core toolkit:\n\n**Backend:** Java 11/17, Spring Boot, Spring Security, Hibernate/JPA, REST, microservices\n**Frontend:** React, JavaScript, TypeScript, Redux\n**Data:** PostgreSQL, Redis, Apache Kafka\n**AWS:** EC2, Lambda, S3, RDS, API Gateway, SQS, IAM, CloudWatch\n**DevOps:** Docker, Kubernetes, Terraform, Jenkins, GitHub Actions\n**Testing:** JUnit, Mockito, Jest, Cypress\n**AI tools:** Claude Code, Codex, OpenCode, GitHub Copilot",
     ],
   },
   languages: {
     patterns: [/\blanguages?\b/i, /\bprogramming languages?\b/i, /\bwhat languages?\b/i],
     responses: [
-      "Alisha works with several languages:\n\n• **Java** (~2 yrs) — JPMorgan microservices, Revature REST APIs, Banking System\n• **Python** (~2 yrs) — JPMorgan Flask, ML Heart Disease, Twitter Clone\n• **JavaScript** (~1.5 yrs) — React apps, Banking System (Next.js)\n• **SQL** (~2 yrs) — PostgreSQL at JPMorgan & Revature, MySQL, H2\n• **C#** — Foundational cert (freeCodeCamp)\n• **PHP** — Own It Property Calculator\n• **HTML/CSS** — Bare Beauty, Own It Calculator, portfolio",
+      "Alisha's day-to-day languages are Java 11 and 17, SQL, JavaScript, and TypeScript, with Python for side work. Java and Spring Boot are the core of her healthcare services at Johnson & Johnson and Oscar Health.",
     ],
   },
   java: {
     patterns: [/\bjava\b(?!\s*script)/i, /\bspring\s*boot\b/i, /\bjpa\b/i],
     responses: [
-      "**Java** — Alisha has ~2 years of professional experience. Projects: JPMorgan Chase microservices (high-volume transactions), Revature REST APIs (40% query improvement), Banking System (Spring Boot), Forage Kafka simulation.",
+      "**Java** is Alisha's primary language. At Johnson & Johnson she leads Java 17 / Spring Boot microservices and secure REST APIs. At Oscar Health she built Java 11 services for member, claims, and provider workflows, with JUnit and Mockito. OwnIt Property Calculator uses Java for the calculation core.",
     ],
   },
   python: {
     patterns: [/\bpython\b/i, /\bdjango\b/i, /\bflask\b/i],
     responses: [
-      "**Python** — Alisha has ~2 years of experience. Projects: JPMorgan Chase Flask microservices, ML Cleveland Heart Disease (Scikit-learn, SHAP), Twitter Clone (Django), Submarine Pizzeria (Django REST API).",
+      "**Python** shows up in side projects: a heart-disease classifier, a Twitter clone in Django, and Submarine Pizzeria. Her production work is Java and Spring Boot.",
     ],
   },
   javascript: {
     patterns: [/\bjavascript\b/i, /\breact\b/i, /\bnext\.?js\b/i, /\bnode\.?js\b/i, /\bredux\b/i, /\bfrontend\b/i, /\bfront.?end\b/i],
     responses: [
-      "**JavaScript** — Alisha has ~1.5 years of experience. Projects: Revature React interfaces, Banking System (Next.js/TypeScript), Expense Reimbursement (React/Tailwind), Submarine Pizzeria & Foot Commerce (React/Redux).",
+      "**React and JavaScript** are how Alisha builds the screens on top of her APIs. At Johnson & Johnson, React interfaces cut time spent on data review by 20%. At Oscar Health, member and provider screens reduced page load time by 20%.",
     ],
   },
   aws: {
     patterns: [/\baws\b/i, /\bcloud\b/i, /\bamazon\b/i, /\bec2\b/i, /\blambda\b/i, /\bs3\b/i],
     responses: [
-      "Alisha is AWS Certified (Cloud Practitioner)! She has experience with EC2, S3, Lambda, RDS, CloudFormation, DynamoDB, SQS, and SNS.",
+      "Alisha is an AWS Certified Cloud Practitioner. She runs Spring Boot services on EC2, RDS/PostgreSQL, S3, Lambda, and API Gateway, and also uses SQS, IAM, and CloudWatch.",
     ],
   },
   devops: {
     patterns: [/\bdevops\b/i, /\bci\/?cd\b/i, /\bdocker\b/i, /\bjenkins\b/i, /\bgit\b/i, /\bpipeline/i],
     responses: [
-      "Alisha has strong DevOps skills! At JPMorgan Chase, she built CI/CD pipelines with Jenkins and Docker. She's also experienced with Git, GitLab CI/CD, and Bitbucket.",
+      "Alisha containerizes Java services with Docker and maintains Jenkins pipelines with Maven and Git. She also works with Kubernetes, Terraform, and GitHub Actions.",
     ],
   },
   ml: {
     patterns: [/\b(machine learning|ml|data science|ai|artificial intelligence)\b/i, /\bscikit/i, /\bshap\b/i],
     responses: [
-      "Alisha has hands-on ML experience! Her standout project is the ML Cleveland Heart Disease classifier — a classification pipeline comparing Logistic Regression, Random Forest, KNN, and SVM with SHAP values for model interpretability.",
+      "Alisha uses AI in two ways. At work she uses Claude Code, Codex, OpenCode, and GitHub Copilot. On OwnIt Property Calculator she is wiring an assistant (Groq or OpenAI) to map, market-trend, and valuation tools. She also built a heart-disease classification project in Python.",
     ],
   },
   experience: {
     patterns: [/\b(experience|work history|career|jobs?|positions?|roles?|where (has|did) (she|alisha) work|employment|worked)\b/i],
     responses: [
-      "Alisha has held 3 engineering roles:\n\n**1. JPMorgan Chase (Forage) — Jan 2026**\nSpring Boot microservice consuming Kafka events with JPA and H2.\n\n**2. JPMorgan Chase — Sept 2023 to Jun 2024**\nSoftware Engineer. Scalable microservices, CI/CD, Redis caching (30% improvement).\n\n**3. Revature — May to Sept 2023**\nFull Stack Java Developer. REST APIs, React frontends, Node.js/MongoDB backends.",
+      "Alisha's experience:\n\n**Johnson & Johnson — Senior Software Engineer, Oct 2024 to present (New Jersey)**\nJava 17 / Spring Boot microservices, Kafka, PostgreSQL, AWS, React, and Jenkins. She also mentors engineers and leads production investigations.\n\n**Oscar Health — Software Engineer, Jun 2021 to Aug 2024 (New Jersey)**\nJava 11 services for member, claims, and provider workflows, React screens, Spring Security, and HIPAA-aligned access.",
     ],
   },
-  jpmorgan: {
-    patterns: [/\bjp\s*morgan\b/i, /\bchase\b/i, /\bforage\b/i],
+  employers: {
+    patterns: [/\b(johnson|& johnson|j&j|jnj|oscar)\b/i],
     responses: [
-      "Alisha has two JPMorgan Chase experiences:\n\n**Contract Role (Sept 2023 – Jun 2024):** Scalable Java Spring Boot and Python Flask microservices, CI/CD with Jenkins/Docker, Redis caching (30% improvement), PCI-DSS compliance.\n\n**Forage Simulation (Jan 2026):** Spring Boot microservice consuming Kafka events with REST Incentive API integration.",
-    ],
-  },
-  revature: {
-    patterns: [/\brevature\b/i],
-    responses: [
-      "At Revature (May – Sept 2023), Alisha was a Full Stack Java Developer. REST APIs with Spring Boot/PostgreSQL (40% query improvement), React frontends, Node.js/MongoDB backends, Agile with Git/Bitbucket.",
+      "Alisha is a Senior Software Engineer at Johnson & Johnson (October 2024–present), leading Java 17 microservices for healthcare. From June 2021 to August 2024 she was a Software Engineer at Oscar Health, building member, claims, and provider systems.",
     ],
   },
   projects: {
     patterns: [/\b(projects?|portfolio work|what (has|did) (she|alisha) (build|create|make|develop)|show me|featured work)\b/i],
     responses: [
-      "Alisha's projects:\n\n**College:** Mars Explorer (React + NASA API), Tic Tac Toe, ML Heart Disease classifier\n\n**Boot Camp:** E-Commerce Microservice (Spring Boot + Kafka), ML Sentiment Analyzer (TensorFlow), AWS Serverless API\n\n**Revature:** Team Management App (React + Node.js + MongoDB), Auth Microservice (Spring Security + JWT), Data Pipeline (Python + Spark)",
+      "The featured project is **OwnIt Property Calculator**: Java calculations and JUnit, plus listings, an agent CRM, and an AI assistant that can use map, trend, and valuation tools.\n\nOther public builds: ML Heart Disease Prediction, Foot Commerce, a Twitter clone, and Submarine Pizzeria. GitHub: github.com/Alisha313",
     ],
   },
   education: {
     patterns: [/\b(education|degree|university|college|school|study|student|kean)\b/i],
     responses: [
-      "Alisha is finishing her **B.S. in Computer Science at Kean University** (expected Dec 2026). She also completed an **A.S. in Computer Science** from Middlesex College.",
+      "Alisha has a **B.S. in Computer Science from Kean University** in Union, NJ.",
     ],
   },
   certifications: {
     patterns: [/\b(certifications?|certified|credentials?|badges?)\b/i],
     responses: [
-      "Alisha holds:\n\n• **AWS Certified Cloud Practitioner** — Amazon Web Services\n• **Java SE 11 Developer** — Oracle\n• **Spring Professional** — VMware",
+      "Alisha is an **AWS Certified Cloud Practitioner**.",
     ],
   },
   contact: {
     patterns: [/\b(contact|reach|email|hire|get in touch|connect|message)\b/i],
     responses: [
-      "Reach Alisha at:\n\n**Email:** alishap1924@gmail.com\n**LinkedIn:** linkedin.com/in/alisha-p-55a692192\n**GitHub:** github.com/Alisha313\n\nOr use the contact form below!",
+      "Reach Alisha at:\n\n**Email:** paalisha11@gmail.com\n**Phone:** (848) 261-2492\n**LinkedIn:** linkedin.com/in/apatel1298\n**GitHub:** github.com/Alisha313",
     ],
   },
   resume: {

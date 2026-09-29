@@ -10,17 +10,25 @@ export default function About() {
         <div className="bento-grid bento-about">
           <div className="bento-card bento-bio glass-card">
             <h2 className="bento-heading">
-              I&apos;m a software engineer who loves{' '}
-              <span className="gradient-text">building things that scale.</span>
+              I got into this work by shipping{' '}
+              <span className="gradient-text">healthcare systems that have to be right.</span>
             </h2>
             <p>
-              Currently finishing my B.S. in Computer Science at <strong>Kean University</strong> (Dec 2026),
-              I&apos;ve spent the last few years working on real production systems &mdash; from high-volume transaction
-              microservices at <strong>JPMorgan Chase</strong> to full-stack applications at <strong>Revature</strong>.
+              I&apos;m a senior software engineer with 5+ years in healthcare and health insurance.
+              The through-line is Java and Spring Boot: secure REST APIs, PostgreSQL, Kafka, and AWS,
+              taken from technical design through production release.
             </p>
             <p>
-              I&apos;m passionate about clean architecture, performant APIs, and cloud-native solutions.
-              When I&apos;m not coding, I&apos;m probably exploring new AWS services or tinkering with ML models.
+              That started at <strong>Oscar Health</strong>, where I spent three years on member, claims,
+              and provider services — eligibility data, HIPAA-aligned access, and React screens for the people
+              using those systems. Since October 2024 I&apos;ve been at <strong>Johnson &amp; Johnson</strong>,
+              leading Java 17 microservices, event workflows, and the production issues that show up after launch.
+            </p>
+            <p>
+              I still build on the side. <strong>OwnIt Property Calculator</strong> is where I&apos;m putting
+              that same backend habit next to an AI assistant — Java for the calculations, and a model that
+              can use the product&apos;s own data. Day to day I also work with Claude Code, Codex, OpenCode,
+              and GitHub Copilot.
             </p>
           </div>
 

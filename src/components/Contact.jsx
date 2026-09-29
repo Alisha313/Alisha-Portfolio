@@ -1,9 +1,12 @@
 import { useState, useRef } from 'react'
 
+const EMAIL = 'paalisha11@gmail.com'
+
 const SOCIALS = [
   { icon: 'ph-github-logo', label: 'GitHub', href: 'https://github.com/Alisha313', user: '@Alisha313' },
-  { icon: 'ph-linkedin-logo', label: 'LinkedIn', href: 'https://linkedin.com/in/alisha-p-55a692192', user: 'Alisha Patel' },
-  { icon: 'ph-envelope-simple', label: 'Email', href: 'mailto:alishap1924@gmail.com', user: 'alishap1924@gmail.com' },
+  { icon: 'ph-linkedin-logo', label: 'LinkedIn', href: 'https://www.linkedin.com/in/apatel1298', user: 'linkedin.com/in/apatel1298' },
+  { icon: 'ph-envelope-simple', label: 'Email', href: `mailto:${EMAIL}`, user: EMAIL },
+  { icon: 'ph-phone', label: 'Phone', href: 'tel:+18482612492', user: '(848) 261-2492' },
 ]
 
 export default function Contact() {
@@ -20,7 +23,7 @@ export default function Contact() {
     setStatus('sending')
 
     try {
-      const res = await fetch('https://formsubmit.co/ajax/alishap1924@gmail.com', {
+      const res = await fetch(`https://formsubmit.co/ajax/${EMAIL}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
@@ -41,7 +44,7 @@ export default function Contact() {
       }
     } catch {
       // Fallback to mailto
-      const mailtoLink = `mailto:alishap1924@gmail.com?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:${EMAIL}?subject=${encodeURIComponent(
         `Portfolio Contact: ${form.name}`
       )}&body=${encodeURIComponent(
         `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`

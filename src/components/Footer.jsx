@@ -10,8 +10,8 @@ const FOOTER_LINKS = [
 
 const FOOTER_SOCIALS = [
   { icon: 'ph-github-logo', href: 'https://github.com/Alisha313', label: 'GitHub' },
-  { icon: 'ph-linkedin-logo', href: 'https://linkedin.com/in/alisha-p-55a692192', label: 'LinkedIn' },
-  { icon: 'ph-envelope-simple', href: 'mailto:alishap1924@gmail.com', label: 'Email' },
+  { icon: 'ph-linkedin-logo', href: 'https://www.linkedin.com/in/apatel1298', label: 'LinkedIn' },
+  { icon: 'ph-envelope-simple', href: 'mailto:paalisha11@gmail.com', label: 'Email' },
 ]
 
 export default function Footer() {
@@ -26,7 +26,7 @@ export default function Footer() {
       <div className="container footer-flex">
         <div className="footer-brand">
           <span className="footer-logo">A<span className="accent-dot">.</span></span>
-          <p>Building scalable solutions with clean code.</p>
+          <p>Senior software engineer. Healthcare systems, Java, and AWS.</p>
         </div>
 
         <nav className="footer-links">

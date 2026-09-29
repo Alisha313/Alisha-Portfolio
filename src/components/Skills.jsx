@@ -1,43 +1,48 @@
 const SKILLS = [
   {
     icon: 'ph-code',
-    title: 'Languages',
-    items: ['Java', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML5', 'CSS3'],
+    title: 'Languages & backend',
+    items: ['Java 11/17', 'Python', 'Spring Boot', 'Spring MVC', 'Spring Security', 'Spring Data JPA', 'Hibernate', 'REST', 'Microservices'],
   },
   {
-    icon: 'ph-frame-corners',
-    title: 'Frameworks',
-    items: ['Spring Boot', 'React.js', 'Node.js', 'Express', 'Flask', 'Hibernate'],
+    icon: 'ph-browser',
+    title: 'Frontend',
+    items: ['React.js', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'React Hooks', 'Redux'],
   },
   {
-    icon: 'ph-brain',
-    title: 'ML / AI',
-    items: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'NLP', 'OpenCV'],
-  },
-  {
-    icon: 'ph-cloud',
-    title: 'Cloud',
-    items: ['AWS (EC2, S3, Lambda)', 'Azure', 'GCP Basics', 'Serverless'],
-  },
-  {
-    icon: 'ph-git-branch',
-    title: 'DevOps',
-    items: ['Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'CI/CD'],
+    icon: 'ph-shield-check',
+    title: 'APIs & security',
+    items: ['OpenAPI/Swagger', 'Postman', 'OAuth 2.0', 'JWT', 'Role-based access'],
   },
   {
     icon: 'ph-database',
-    title: 'Databases',
-    items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'DynamoDB'],
+    title: 'Data & messaging',
+    items: ['PostgreSQL', 'SQL', 'Redis', 'Apache Kafka', 'Query optimization', 'Caching'],
+  },
+  {
+    icon: 'ph-cloud',
+    title: 'AWS',
+    items: ['EC2', 'Lambda', 'S3', 'RDS', 'API Gateway', 'SQS', 'IAM', 'CloudWatch'],
+  },
+  {
+    icon: 'ph-git-branch',
+    title: 'DevOps & CI/CD',
+    items: ['Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'GitHub Actions', 'Maven', 'Linux', 'Bash'],
   },
   {
     icon: 'ph-bug',
     title: 'Testing',
-    items: ['JUnit', 'Mockito', 'Jest', 'Selenium', 'Postman'],
+    items: ['JUnit', 'Mockito', 'Jest', 'React Testing Library', 'Cypress'],
   },
   {
-    icon: 'ph-tree-structure',
-    title: 'Core CS',
-    items: ['Data Structures', 'Algorithms', 'OOP', 'Design Patterns', 'System Design'],
+    icon: 'ph-chart-line',
+    title: 'Observability',
+    items: ['Splunk', 'Datadog', 'Prometheus', 'Grafana'],
+  },
+  {
+    icon: 'ph-robot',
+    title: 'AI development',
+    items: ['Claude Code', 'Codex', 'OpenCode', 'GitHub Copilot'],
   },
 ]
 
@@ -50,7 +55,7 @@ export default function Skills() {
           <span className="label-text">03 / Skills</span>
         </div>
         <h2 className="section-heading">
-          Technical <span className="gradient-text">Arsenal</span>
+          Technical <span className="gradient-text">stack</span>
         </h2>
 
         <div className="skills-bento">

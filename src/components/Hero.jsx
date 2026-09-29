@@ -17,13 +17,13 @@ const BASE_SPEED = 0.3
 const FRICTION = 0.92
 
 const ROTATING_WORDS = [
-  'scalable microservices',
-  'cloud infrastructure',
-  'full-stack applications',
-  'CI/CD pipelines',
+  'healthcare services',
+  'secure REST APIs',
+  'event-driven systems',
+  'production Java',
 ]
 
-const TECH_CHIPS = ['Java', 'Python', 'Spring Boot', 'AWS', 'React', 'Docker']
+const TECH_CHIPS = ['Java 17', 'Spring Boot', 'Kafka', 'PostgreSQL', 'AWS', 'React']
 
 export default function Hero() {
   const canvasRef = useRef(null)
@@ -153,7 +153,7 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-badge">
           <span className="badge-dot" />
-          Open to Opportunities
+          Senior Software Engineer · New Jersey
         </div>
 
         <h1 className="hero-name" data-splitting>
@@ -174,8 +174,8 @@ export default function Hero() {
         </h2>
 
         <p className="hero-tagline">
-          Software Engineer crafting high-performance Java &amp; Python systems
-          in financial and cloud-based environments.
+          Five years building healthcare and health insurance systems —
+          Java services, secure APIs, and the path from design to production.
         </p>
 
         <div className="hero-cta">

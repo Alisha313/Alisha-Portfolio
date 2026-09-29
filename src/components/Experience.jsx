@@ -1,55 +1,34 @@
 const JOBS = [
   {
-    icon: 'ph-buildings',
-    role: 'Software Engineering Job Simulation',
-    company: 'JPMorgan Chase (Forage)',
-    date: 'Jan 2026',
+    icon: 'ph-first-aid',
+    role: 'Senior Software Engineer',
+    company: 'Johnson & Johnson — New Jersey',
+    date: 'Oct 2024 – Present',
     bullets: [
-      'Built a Spring Boot microservice that consumes high-volume Kafka transaction events, validates data, and persists records using Spring Data JPA with an H2 SQL database.',
-      'Integrated an external REST Incentive API into the transaction workflow and exposed a REST endpoint for querying user balances in JSON format.',
-      'Tested and verified system reliability using Maven test suites and embedded Kafka, ensuring correct message processing, database updates, and API interactions.',
+      'Lead the design and delivery of Java 17 / Spring Boot microservices and secure REST APIs for healthcare applications, with Spring Security and role-based access control.',
+      'Build React interfaces and integrate them with Spring Boot APIs, cutting time spent on data review tasks by 20%.',
+      'Optimize PostgreSQL queries and Hibernate/JPA data access for validation and reporting, reducing report response time by 25%.',
+      'Develop Kafka producers and consumers for healthcare event workflows, with message validation, exception handling, retries, and failure recovery.',
+      'Deploy and operate Spring Boot services on AWS — EC2, RDS/PostgreSQL, S3, Lambda, and API Gateway — for event-driven processing and production API integrations.',
+      'Containerize Java services with Docker and maintain Jenkins CI/CD pipelines with Maven and Git across environments.',
+      'Review code, mentor engineers, and lead production investigations across React, service logs, and SQL with development and QA.',
     ],
-    tags: ['Spring Boot', 'Kafka', 'REST API', 'JPA'],
+    tags: ['Java 17', 'Spring Boot', 'Kafka', 'PostgreSQL', 'AWS', 'React'],
   },
   {
-    icon: 'ph-buildings',
-    role: 'Software Engineer (Contract)',
-    company: 'JPMorgan Chase \u2014 Newport, NJ',
-    date: 'Sept 2023 \u2013 Jun 2024',
+    icon: 'ph-heartbeat',
+    role: 'Software Engineer',
+    company: 'Oscar Health — New Jersey',
+    date: 'Jun 2021 – Aug 2024',
     bullets: [
-      'Designed and deployed scalable Java Spring Boot and Python Flask microservices supporting high-volume financial transactions across multiple services.',
-      'Built CI/CD pipelines with Jenkins and Docker to streamline deployments and improve release reliability.',
-      'Implemented Redis caching and optimized database queries, improving API response times by 30%.',
-      'Created API documentation and onboarding tools to improve developer productivity and reduce setup time.',
-      'Collaborated with cross-functional teams to ensure applications met PCI-DSS and enterprise security standards.',
+      'Developed Java 11 / Spring Boot microservices and REST APIs for member, claims, and provider workflows.',
+      'Built responsive member and provider screens in React, JavaScript, HTML5, and CSS, integrating REST APIs and reducing page load time by 20%.',
+      'Implemented Hibernate/JPA and PostgreSQL data access for eligibility and insurance records.',
+      'Applied Spring Security and request validation so access to protected health information stayed inside HIPAA-aligned workflows.',
+      'Deployed and maintained applications on AWS EC2, RDS, and S3 with Docker, Jenkins, Maven, and Git.',
+      'Wrote JUnit and Mockito tests for member, claims, and provider services, and validated fixes with QA through release.',
     ],
-    tags: ['Java', 'Python', 'Jenkins', 'Docker', 'Redis'],
-  },
-  {
-    icon: 'ph-code',
-    role: 'Full Stack Java Developer',
-    company: 'Revature \u2014 Edison, NJ',
-    date: 'May 2023 \u2013 Sept 2023',
-    bullets: [
-      'Developed REST APIs with Java Spring Boot and PostgreSQL, improving query performance by 40%.',
-      'Built responsive React.js interfaces with optimized state management for faster rendering.',
-      'Designed Node.js backends with MongoDB to support high-availability applications.',
-      'Collaborated in Agile teams using Git and Bitbucket for version control and delivery.',
-    ],
-    tags: ['Spring Boot', 'React.js', 'Node.js', 'MongoDB', 'PostgreSQL'],
-  },
-  {
-    icon: 'ph-storefront',
-    role: 'Task Associate',
-    company: 'Ulta Beauty \u2014 Woodbridge, NJ',
-    date: 'Sept 2025 \u2013 Present',
-    bullets: [
-      'Unload and organize incoming merchandise shipments efficiently.',
-      'Stock shelves and maintain accurate backroom inventory.',
-      'Assist with visual merchandising and promotional displays.',
-    ],
-    tags: ['Operations', 'Inventory', 'Merchandising'],
-    outside: true, // rendered outside exp-list
+    tags: ['Java 11', 'Spring Boot', 'React', 'PostgreSQL', 'Spring Security'],
   },
 ]
 
@@ -67,7 +46,7 @@ function ExpCard({ job }) {
         <span className="exp-date">{job.date}</span>
       </div>
       <ul className="exp-bullets">
-        {job.bullets.map((b, i) => <li key={i}>{b}</li>)}
+        {job.bullets.map((b) => <li key={b}>{b}</li>)}
       </ul>
       <div className="exp-tags">
         {job.tags.map((t) => <span key={t} className="exp-tag">{t}</span>)}
@@ -77,9 +56,6 @@ function ExpCard({ job }) {
 }
 
 export default function Experience() {
-  const mainJobs = JOBS.filter((j) => !j.outside)
-  const outsideJobs = JOBS.filter((j) => j.outside)
-
   return (
     <section className="section section-alt" id="experience">
       <div className="container">
@@ -88,14 +64,12 @@ export default function Experience() {
           <span className="label-text">02 / Experience</span>
         </div>
         <h2 className="section-heading">
-          Where I&apos;ve <span className="gradient-text">Worked</span>
+          The <span className="gradient-text">path</span>
         </h2>
 
         <div className="exp-list">
-          {mainJobs.map((job, i) => <ExpCard key={i} job={job} />)}
+          {JOBS.map((job) => <ExpCard key={job.company} job={job} />)}
         </div>
-
-        {outsideJobs.map((job, i) => <ExpCard key={`out-${i}`} job={job} />)}
       </div>
     </section>
   )
